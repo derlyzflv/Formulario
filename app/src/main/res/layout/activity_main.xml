@@ -53,13 +53,15 @@
                     android:text="CLIENTE"
                     android:textColor="#fff"
                     android:textSize="20dp"/>
+
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_marginBottom="20dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:onClick="mostrarCalendario"
                     android:text="FECHA DE VENTA"
                     android:textColor="#fff"
-                    android:textSize="20dp"/>
+                    android:textSize="20dp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
