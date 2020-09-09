@@ -2,6 +2,7 @@ package com.example.oma.formularioparabd;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     Spinner comboproductos;
     EditText orden,cliente,fecha,cantidad,precio,total;
-    Button agregar;
+    Button agregar,mostrar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         precio=findViewById(R.id.precio_edit);
         total=findViewById(R.id.total_edit);
         agregar=(Button) findViewById(R.id.agregar_boton);
+        mostrar=findViewById(R.id.mostar_datos);
 
         final BD dblite=new BD(getApplicationContext());
 
@@ -40,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
                 dblite.agregarVentas(orden.getText().toString(),cliente.getText().toString(),fecha.getText().toString(),comboproductos.getSelectedItem().toString(),
                         cantidad.getText().toString(),precio.getText().toString(),total.getText().toString());
                 Toast.makeText(getApplicationContext(),"Se agrego correctamente",Toast.LENGTH_SHORT).show();
+            }
+        });
+        mostrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mostrarVentas=new Intent(getApplicationContext(),VentasActivity.class);
+                startActivity(mostrarVentas);
             }
         });
     }

@@ -168,6 +168,13 @@
                 android:layout_marginRight="20dp"
                 android:id="@+id/agregar_boton">
             </Button>
+
+            <Button
+                android:id="@+id/mostar_datos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="MOSTRAR" />
         </LinearLayout>
 
 
