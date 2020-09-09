@@ -20,7 +20,7 @@ public class BD extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+TABLA_REGISTRO );
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS '"+TABLA_REGISTRO );
         sqLiteDatabase.execSQL(TABLA_REGISTRO);
     }
 
